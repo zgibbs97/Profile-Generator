@@ -4,7 +4,7 @@ describe("Employee", () => {
 
     it("Can set employee instance", () => {
         const e = new Employee();
-        expect(typeof(e)).toBe("Object")
+        expect(typeof(e)).toBe("object")
     });
 
     it("Can set employee name", () => {
@@ -50,7 +50,7 @@ describe("Employee", () => {
     });
 
     describe("getRole", () => {
-        it("getRole() should return /Employee/", () => {
+        it("getRole() should return \"employee\"", () => {
             const testValue = "Employee";
             const e = new Employee("Zach", 1, "test@test.com")
             expect(e.getRole()).toBe(testValue);
