@@ -23,7 +23,7 @@ function runInquirer() {
     }, {
         type: "list",
         message: "What is your title?",
-        choices: ["Manager, Engineer, Intern"],
+        choices: ["Manager", "Engineer", "Intern"],
         name: "title"
     }];
 
@@ -61,12 +61,12 @@ function runInquirerIntern() {
     }];
 
     return inquirer
-        .promt(promptArray);
+        .prompt(promptArray);
 }
 
 async function run() {
     let employeeArray = [];
-    const MaxTimes = 4;
+    const MaxTimes = 3;
     for (i = 0; i < MaxTimes; i++) {
         const promise = new Promise((resolve, reject) => {
             runInquirer()
@@ -117,7 +117,7 @@ async function run() {
 
     function getCardHtml() {
         let html = "";
-        for (j = 0; J < MaxTimes; j++) {
+        for (j = 0; j < MaxTimes; j++) {
             html += `<div class="card bg-light justify-content-center align-items-center">
                 <div class="col card-header">
                     <h4>${employeeArray[j].name}</h4>
