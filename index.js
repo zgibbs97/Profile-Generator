@@ -102,15 +102,15 @@ async function run() {
     }
 
     function displayTitle(employee) {
-        if (employee.title === "Manager") {
+        if (employee.getRole() === "Manager") {
             return `office number: ${employee.officeNumber}`;
         }
 
-        if (employee.title === "Engineer") {
+        if (employee.getRole() === "Engineer") {
             return `gitHub: ${employee.github}`;
         }
 
-        if (employee.title === "Intern") {
+        if (employee.getRole() === "Intern") {
             return `school : ${employee.school}`;
         }
     }
@@ -123,7 +123,7 @@ async function run() {
                     <h4>${employeeArray[j].name}</h4>
                 </div>
                 <div class="col card-header">
-                    <h4>${employeeArray[j].title}</h4>
+                    <h4>${employeeArray[j].getRole()}</h4>
                 </div>
                 <ul class="list-group list-group-flush text">
                     <li class="list-group-item">ID: ${employeeArray[j].id}</li>
